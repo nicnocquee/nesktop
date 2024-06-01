@@ -16,11 +16,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "rimraf .next && next build",
-    "start": "concurrently \"next start -p 1184\" \"npm run open-browser\"",
+    "start": "concurrently \"next start -p 4323\" \"npm run open-browser\"",
     "lint": "next lint",
     "bump": "npm version patch --force",
     "prepublishOnly": "npm run bump && npm run build",
-    "open-browser": "wait-on http://localhost:1184 && open http://localhost:1184"
+    "open-browser": "wait-on http://localhost:4323 && open http://localhost:4323"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.2",

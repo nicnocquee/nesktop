@@ -10,7 +10,7 @@ To run this repo's Next.js app, run the following command:
 npx @nicnocquee/next-app-as-npm@latest
 ```
 
-Once the package is downloaded, it will automatically run the production build of the Next.js app and open the [http://localhost:1184](http://localhost:1184) URL in your browser.
+Once the package is downloaded, it will automatically run the production build of the Next.js app and open the [http://localhost:4323](http://localhost:4323) URL in your browser.
 
 # Usage
 
