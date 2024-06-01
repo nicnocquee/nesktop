@@ -1,12 +1,10 @@
-# Welcome to the Next.js demo app published as an NPM package!
+# About
 
-I needed a GUI app for my personal project that required access to the file system. Ideally, I should create a desktop app using a native platform or Electron for cross-platform support. However, developing a native app for macOS, Windows, and Linux would have taken time. The same applies to Electron, even though it's web-based.
+This repository is a [Next.js](https://nextjs.org) template that can be used to publish the Next.js app as an NPM package. The idea is instead of making a desktop app using a native platform or Electron for cross-platform support, you can make a Next.js app that anyone can run locally in a single command.
 
-So I had an idea. Since I am so used to making web apps using Next.js, why don't I make a Next.js app that anyone can run locally without cloning and installing dependencies? It's basically like an Electron app but without the hassle of [managing window lifecycle](https://www.electronjs.org/docs/latest/tutorial/tutorial-first-app#managing-your-apps-window-lifecycle) or [learning the process model](https://www.electronjs.org/docs/latest/tutorial/process-model), etc.
+# Demo
 
-**It turned out it's possible**. Using the template of this website, you can create the Next.js app normally and then build it for production. The production build will then be published as an NPM package. Then anyone can simply run `npx the-package-name`.
-
-For example, to run this repo's Next.js app, run
+To run this repo's Next.js app, run the following command:
 
 ```
 npx @nicnocquee/next-app-as-npm@latest
@@ -14,17 +12,24 @@ npx @nicnocquee/next-app-as-npm@latest
 
 Once the package is downloaded, it will automatically run the production build of the Next.js app and open the [http://localhost:1184](http://localhost:1184) URL in your browser.
 
-# Writing and reading files
+# Usage
 
-Writing and reading files from the file system is as easy as using the `fs` module as usual in the server part of Next.js, like in the `route.ts` or in a [server action](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations).
+To create your own Next.js app that can be published as an NPM package, you can use the template of this repository:
 
-For example, go to the [add user page](/add-user) and enter an email and password. Then click the "Add user" button. You will see the user added to the `public/data/users.json` file.
+1. click the "Use this template" button on GitHub and then follow the instructions.
+2. clone the repository to your local machine.
+3. change the `name` of the package in `package.json` to your own package name.
+4. run `npm install` to install the dependencies.
+5. run `npm run dev` to start the development server.
+6. start developing the Next.js app as usual.
+7. once you're done, you can publish the app to NPM by running `npm publish --access public`.
 
-# About me
+The Next.js template is bootstrapped using [create-next-app](https://nextjs.org/docs/pages/api-reference/create-next-app) and equipped with [Shadcn UI components](https://ui.shadcn.com).
 
-Hi, I'm Nico Prananta. I'm a software engineer from Indonesia currently living in Zürich, Switzerland. You can find me on these platforms:
+# License
 
-- [Personal website](https://nico.fyi)
-- [GitHub](https://github.com/nicnocquee)
-- [Twitter](https://twitter.com/2co_p)
-- [LinkedIn](https://www.linkedin.com/in/nico-prananta-884750200/)
+MIT
+
+# Contact
+
+Nico Prananta - [@2co_p](https://twitter.com/2co_p) - [nico.fyi](https://nico.fyi)
