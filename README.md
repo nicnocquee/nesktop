@@ -4,6 +4,8 @@ This repository is a [Next.js](https://nextjs.org) template that can be used to 
 
 # Why use this?
 
+In markdown, it's not standard to create a table without headers. However, you can still create a table that visually looks like it has no headers by simply placing a blank row instead of headers. Here’s how you can do it:
+
 |     |                                                                                                                                                    |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ✅  | Your app targets other web developers. They most likely already have Node.js and NPM installed.                                                    |
