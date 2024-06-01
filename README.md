@@ -6,9 +6,10 @@ This repository is a [Next.js](https://nextjs.org) template that can be used to 
 
 |     |                                                                                                                                                    |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ✅  | Small package size. This template app is only 6.6 MB (excluding the dependencies, which will be downloaded when the user execute the CLI command). |
 | ✅  | Your app targets other web developers. They most likely already have Node.js and NPM installed.                                                    |
 | ✅  | You're already familiar with Next.js.                                                                                                              |
+| ✅  | Small package size. This template app is only 6.6 MB (excluding the dependencies, which will be downloaded when the user execute the CLI command). |
+| ✅  | Easy to update. Simply `npm publish --access public` to update the package.                                                                        |
 
 # Demo
 
