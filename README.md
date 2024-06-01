@@ -4,10 +4,12 @@ I needed a GUI app for my personal project that required access to the file syst
 
 So I had an idea. Since I am so used to making web apps using Next.js, why don't I make a Next.js app that anyone can run locally without cloning and installing dependencies? It's basically like an Electron app but without the hassle of [managing window lifecycle](https://www.electronjs.org/docs/latest/tutorial/tutorial-first-app#managing-your-apps-window-lifecycle) or [learning the process model](https://www.electronjs.org/docs/latest/tutorial/process-model), etc.
 
-**It turned out it's possible**. Using the template of this website, you can create the Next.js app normally and then build it for production. The production build will then be published as an NPM package. Then anyone can simply run `npx the-package-name`. For example, to run this repo's Next.js app, run
+**It turned out it's possible**. Using the template of this website, you can create the Next.js app normally and then build it for production. The production build will then be published as an NPM package. Then anyone can simply run `npx the-package-name`.
+
+For example, to run this repo's Next.js app, run
 
 ```
-npx @nicnocquee/next-app-as-npm
+npx @nicnocquee/next-app-as-npm@latest
 ```
 
 Once the package is downloaded, it will automatically run the production build of the Next.js app and open the [http://localhost:1184](http://localhost:1184) URL in your browser.
