@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "rimraf dist && next build",
+    "build": "rimraf .next && next build",
     "start": "concurrently \"next start -p 1184\" \"npm run open-browser\"",
     "lint": "next lint",
     "bump": "npm version patch --force",
