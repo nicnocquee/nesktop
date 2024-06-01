@@ -10,9 +10,22 @@
     "README.md",
     "LICENSE",
     "start.js",
-    "public",
-    "!public/data"
+    "public"
   ],
+  "keywords": [
+    "nextjs",
+    "next-app",
+    "npm",
+    "package"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicnocquee/next-app-as-npm"
+  },
+  "author": {
+    "name": "Nico Prananta",
+    "url": "https://nico.fyi"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "rimraf .next && next build",

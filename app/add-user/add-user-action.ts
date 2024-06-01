@@ -17,6 +17,8 @@ export default async function addUserAction(
 
   // load json from file if exists
   // get directory where the script is running
+  // don't use process.cwd(). because when it's run with `npx <package-name>`, the process.cwd() will be the package directory
+  // where npx installed it.
   const fileDir = path.resolve(
     process.env.ORIGINAL_CWD || process.cwd(),
     "public/data"
