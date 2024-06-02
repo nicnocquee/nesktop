@@ -28,7 +28,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "rimraf .next && next build",
+    "build": "rimraf .next && next build && rimraf .next/cache",
     "start": "concurrently \"next start -p 4323\" \"npm run open-browser\"",
     "lint": "next lint",
     "bump": "npm version patch --force",
