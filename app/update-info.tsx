@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 export default function UpdateInfo() {
   const [currentVersion, setCurrentVersion] = useState<string | undefined>();
   const [latestVersion, setLatestVersion] = useState<string | undefined>();
+  const [appName, setAppName] = useState<string | undefined>();
 
   const abortControllerRef = useRef<AbortController | null>(null);
 
@@ -22,6 +23,7 @@ export default function UpdateInfo() {
         if (!isCleandUp) {
           setCurrentVersion(data.currentVersion);
           setLatestVersion(data.latestVersion);
+          setAppName(data.appName);
         }
       } catch (error) {}
     };
@@ -54,7 +56,7 @@ export default function UpdateInfo() {
           </p>
           <p>Run the following command in your terminal to update the app:</p>
           <p className="p-2 my-4 bg-slate-800 rounded-md text-white">
-            <code>npm i -g {process.env.APP_NAME}@latest</code>
+            <code>npm i -g {appName}@latest</code>
           </p>
         </AlertDescription>
       </Alert>
