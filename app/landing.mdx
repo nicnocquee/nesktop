@@ -18,6 +18,10 @@ Writing and reading files from the file system is as easy as using the `fs` modu
 
 For example, go to the [add user page](/add-user) and enter an email and password. Then click the "Add user" button. You will see the user added to the `public/data/users.json` file.
 
+# Update Notification
+
+Unlike the Electron app or a Next.js app in the cloud, this app cannot be automatically updated. But the Next.js app in this template gets the current installed version from the package.json file and the latest version from the NPM registry. These values can be accessed from the `process.env.APP_CURRENT_VERSION` and `process.env.APP_LATEST_VERSION` environment variables. If the current version is not the same as the latest version, you can show a notification to the user to update the app like how this app does as you can see in the [UpdateInfo component](https://github.com/nicnocquee/next-app-as-npm/blob/main/app/update-info.tsx).
+
 # About me
 
 Hi, I'm Nico Prananta. I'm a software engineer from Indonesia currently living in Zürich, Switzerland. You can find me on these platforms:
