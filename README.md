@@ -1,12 +1,12 @@
 # About
 
-This repository is a [Next.js](https://nextjs.org) template that can be used to publish the Next.js app as an NPM package. The idea is instead of making a desktop app using a native platform or Electron for cross-platform support, you can make a Next.js app that anyone can run locally in a single command.
+This repository is a [Next.js](https://nextjs.org) template that can be used to publish the Next.js app as an NPM package. The idea is instead of making a desktop app using a native platform or Electron for cross-platform support, you can make a Next.js app that anyone can **run locally in a single command**. And the app can also work offline if it doesn't need to access the internet.
 
 # Why use this?
 
 |     |                                                                                                                                                    |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ✅  | Your app targets other web developers. They most likely already have Node.js and NPM installed.                                                    |
+| ✅  | Your app targets people who have installed Node.js in their computer, which is the majority of web developers these days.                          |
 | ✅  | You're already familiar with Next.js.                                                                                                              |
 | ✅  | Small package size. This template app is only 6.6 MB (excluding the dependencies, which will be downloaded when the user execute the CLI command). |
 | ✅  | Easy to update. Simply `npm publish --access public` to update the package.                                                                        |

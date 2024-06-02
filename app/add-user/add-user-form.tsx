@@ -12,21 +12,55 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useFormState } from "react-dom";
-import addUserAction from "./add-user-action";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import addUserAction from "./user-action";
+import { useEffect, useRef, useState } from "react";
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogCancel,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 
 export default function AddUserForm() {
   const [state, formAction] = useFormState(addUserAction, {});
+  const [alertOpen, setAlertOpen] = useState(false);
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (formRef.current) {
+      formRef.current.reset();
+    }
+  }, [state]);
+
+  useEffect(() => {
+    if (state && "status" in state && state.status === "no") {
+      setAlertOpen(true);
+    }
+  }, [state]);
+
   return (
     <form
+      ref={formRef}
       action={formAction}
       className="w-full max-w-sm flex flex-col space-y-4"
     >
-      {state && "status" in state && state.status === "ok" && (
-        <Alert>
-          <AlertDescription>User saved to {state.data}</AlertDescription>
-        </Alert>
-      )}
+      <AlertDialog open={alertOpen} onOpenChange={setAlertOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Error</AlertDialogTitle>
+            <AlertDialogDescription>
+              E-mail already exists. Please enter a different e-mail.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>OK</AlertDialogCancel>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
       <Card className="w-full max-w-sm">
         <CardHeader>
           <CardTitle className="text-2xl">Add user</CardTitle>
@@ -38,8 +72,9 @@ export default function AddUserForm() {
           <div className="grid gap-2">
             <Label htmlFor="email">Email</Label>
             <Input
+              autoComplete="off"
               id="email"
-              name="email"
+              name="user-email"
               type="email"
               placeholder="m@example.com"
               required

