@@ -37,8 +37,6 @@ export default function UpdateInfo() {
   const shouldShowUpdateAvailableAlert =
     currentVersion && latestVersion && currentVersion !== latestVersion;
 
-  console.log({ currentVersion, latestVersion });
-
   if (!shouldShowUpdateAvailableAlert) {
     return null;
   }
