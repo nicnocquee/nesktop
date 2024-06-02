@@ -23,7 +23,7 @@ npx @nicnocquee/next-app-as-npm@latest
 
 Once the package is downloaded, it will automatically run the production build of the Next.js app and open the [http://localhost:4323](http://localhost:4323) URL in your browser.
 
-If you want to run the app offline, you need to install it globally first:
+If you want to run the app offline, you need to install it globally first instead of using `npx`:
 
 ```
 npm i -g @nicnocquee/next-app-as-npm@latest
