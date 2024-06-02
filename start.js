@@ -17,7 +17,9 @@ const version = packageJson.version;
 // Check if there is a new version in the npm registry
 const npmVersion = execSync(`npm view "${name}" version`).toString();
 if (npmVersion !== version) {
-  console.log(`A new version of ${name} is available: ${npmVersion}`);
+  console.log(
+    `A new version of ${name} is available: ${npmVersion}. Current version: ${version}`
+  );
   console.log(`Please run \`npm i -g ${name}@latest\` to update the package.`);
 }
 
