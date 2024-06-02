@@ -2,7 +2,7 @@
   "name": "@nicnocquee/next-app-as-npm",
   "version": "0.0.21",
   "bin": {
-    "next-app-as-npm": "./start.js"
+    "next-app-as-npm": "start.js"
   },
   "files": [
     ".next",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicnocquee/next-app-as-npm"
+    "url": "git+https://github.com/nicnocquee/next-app-as-npm.git"
   },
   "author": {
     "name": "Nico Prananta",
