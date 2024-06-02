@@ -12,10 +12,10 @@ const projectDir = path.resolve(__dirname);
 // Get the name and version from package.json
 const packageJson = require("./package.json");
 const name = packageJson.name;
-const version = packageJson.version;
+const version = packageJson.version.trim();
 
 // Check if there is a new version in the npm registry
-const npmVersion = execSync(`npm view "${name}" version`).toString();
+const npmVersion = execSync(`npm view "${name}" version`).toString().trim();
 if (npmVersion !== version) {
   console.log(
     `A new version of ${name} is available: ${npmVersion}. Current version: ${version}`
