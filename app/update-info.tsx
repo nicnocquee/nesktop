@@ -5,12 +5,8 @@ import { Terminal } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export default function UpdateInfo() {
-  const [currentVersion, setCurrentVersion] = useState(
-    process.env.APP_CURRENT_VERSION
-  );
-  const [latestVersion, setLatestVersion] = useState(
-    process.env.APP_LATEST_VERSION
-  );
+  const [currentVersion, setCurrentVersion] = useState<string | undefined>();
+  const [latestVersion, setLatestVersion] = useState<string | undefined>();
 
   const abortControllerRef = useRef<AbortController | null>(null);
 
@@ -41,7 +37,7 @@ export default function UpdateInfo() {
   const shouldShowUpdateAvailableAlert =
     currentVersion && latestVersion && currentVersion !== latestVersion;
 
-  console.log(currentVersion, latestVersion);
+  console.log({ currentVersion, latestVersion });
 
   if (!shouldShowUpdateAvailableAlert) {
     return null;
