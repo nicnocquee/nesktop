@@ -1,9 +1,43 @@
+"use client";
+
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Terminal } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 export default function UpdateInfo() {
-  const currentVersion = process.env.APP_CURRENT_VERSION;
-  const latestVersion = process.env.APP_LATEST_VERSION;
+  const [currentVersion, setCurrentVersion] = useState(
+    process.env.APP_CURRENT_VERSION
+  );
+  const [latestVersion, setLatestVersion] = useState(
+    process.env.APP_LATEST_VERSION
+  );
+
+  const abortControllerRef = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    let isCleandUp = false; // this is the indicator
+    const abortController = new AbortController();
+    abortControllerRef.current = abortController;
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/update");
+        const data = await response.json();
+        if (!isCleandUp) {
+          setCurrentVersion(data.currentVersion);
+          setLatestVersion(data.latestVersion);
+        }
+      } catch (error) {}
+    };
+
+    fetchData();
+    return () => {
+      isCleandUp = true;
+      abortController.abort();
+      abortControllerRef.current = null;
+    };
+  }, []);
+
   const shouldShowUpdateAvailableAlert =
     currentVersion && latestVersion && currentVersion !== latestVersion;
 
