@@ -10,6 +10,8 @@ This repository is a [Next.js](https://nextjs.org) template that can be used to 
 | ✅  | You're already familiar with Next.js.                                                                                                              |
 | ✅  | Small package size. This template app is only 6.6 MB (excluding the dependencies, which will be downloaded when the user execute the CLI command). |
 | ✅  | Easy to update. Simply `npm publish --access public` to update the package.                                                                        |
+| ✅  | Works offline! Note that you need to install the package globally `npm i -g <package-name>` instead of using `npx`.                                |
+| ✅  | No need for authentication because the app runs on user's own computer.                                                                            |
 
 # Demo
 
@@ -20,6 +22,18 @@ npx @nicnocquee/next-app-as-npm@latest
 ```
 
 Once the package is downloaded, it will automatically run the production build of the Next.js app and open the [http://localhost:4323](http://localhost:4323) URL in your browser.
+
+If you want to run the app offline, you need to install it globally first:
+
+```
+npm i -g @nicnocquee/next-app-as-npm@latest
+```
+
+then run the app:
+
+```
+next-app-as-npm
+```
 
 # Usage
 
