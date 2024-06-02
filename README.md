@@ -4,14 +4,14 @@ This repository is a [Next.js](https://nextjs.org) template that can be used to 
 
 # Why use this?
 
-|     |                                                                                                                                                    |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ✅  | Your app targets people who have installed Node.js in their computer, which is the majority of web developers these days.                          |
-| ✅  | You're already familiar with Next.js.                                                                                                              |
-| ✅  | Small package size. This template app is only 6.6 MB (excluding the dependencies, which will be downloaded when the user execute the CLI command). |
-| ✅  | Easy to update. Simply `npm publish --access public` to update the package.                                                                        |
-| ✅  | Works offline! Note that you need to install the package globally `npm i -g <package-name>` instead of using `npx`.                                |
-| ✅  | No need for authentication because the app runs on user's own computer.                                                                            |
+|     |                                                                                                                                                |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| ✅  | Your app targets people who have installed Node.js in their computer, which is the majority of web developers these days.                      |
+| ✅  | You're already familiar with Next.js.                                                                                                          |
+| ✅  | Small package size. This template app is only 1.3 MB (excluding the dependencies, which will be downloaded when the user install the package). |
+| ✅  | Easy to update. Simply `npm publish --access public` to update the package.                                                                    |
+| ✅  | Works offline! Note that you need to install the package globally `npm i -g <package-name>` instead of using `npx`.                            |
+| ✅  | No need for authentication because the app runs on user's own computer.                                                                        |
 
 # Demo
 
@@ -56,7 +56,7 @@ If you don't want to use the template, you can simply add the following properti
 ```json
 {
   "bin": {
-    "<package-name>": "./start.js"
+    "<package-name>": "start.js"
   },
   "files": [
     ".next",
@@ -67,7 +67,7 @@ If you don't want to use the template, you can simply add the following properti
     "public"
   ],
   "scripts": {
-    "build": "rimraf .next && next build",
+    "build": "rimraf .next && next build && rimraf .next/cache",
     "start": "concurrently \"next start -p 4323\" \"npm run open-browser\"",
     "bump": "npm version patch --force",
     "prepublishOnly": "npm run bump && npm run build",
