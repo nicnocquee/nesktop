@@ -10,7 +10,7 @@ export default async function About() {
   const jsonPath = usersJson();
   return (
     <div className="grid grid-cols-4 max-w-6xl mx-auto w-full gap-4">
-      <div className="flex flex-col space-y-4 my-4">
+      <div className="flex flex-col space-y-4">
         <AddUserForm />
         <Card>
           <CardHeader>
