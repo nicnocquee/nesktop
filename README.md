@@ -15,7 +15,7 @@ The idea is instead of making a "desktop" app using a native platform or Electro
 | ▲   | You're already familiar with Next.js.                                                                                     |
 | 🌐  | You don't mind the app runs in the browser instead of in a stand alone window.                                            |
 
-# Benefits
+# Features
 
 |     |                                                                                                                                                                            |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
