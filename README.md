@@ -63,6 +63,17 @@ To create your own Next.js app that can be published as an NPM package, you can 
 
 The Next.js template is bootstrapped using [create-next-app](https://nextjs.org/docs/pages/api-reference/create-next-app) and equipped with [Shadcn UI components](https://ui.shadcn.com) and [MDX support](https://nextjs.org/docs/pages/building-your-application/configuring/mdx).
 
+## Special Environment Variables
+
+When the app is run, it injects the following [environment variables which you can use in your Next.js app](https://www.nico.fyi/blog/stop-using-environment-variable-directly):
+
+| Name                | Description                                                                                                                                                                                                                                                                                                   |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ORIGINAL_CWD        | The directory where your package is run from. For example, if you run `npx next-app-as-npm` from the `/Users/nico/Downloads` directory, the value of this variable will be `/Users/nico/Downloads`. You should not use `process.cwd()` because it will return the directory where NPM installed your package. |
+| APP_NAME            | The name of the app as defined in `package.json`.                                                                                                                                                                                                                                                             |
+| APP_CURRENT_VERSION | The current version of the app as defined in `package.json`.                                                                                                                                                                                                                                                  |
+| APP_LATEST_VERSION  | The latest version of the app which is published to NPM.                                                                                                                                                                                                                                                      |
+
 # The main sauce
 
 If you don't want to use the template, you can simply add the following properties to your package.json that enables the app to be published as an NPM package:
