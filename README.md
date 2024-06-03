@@ -24,7 +24,7 @@ The idea is instead of making a "desktop" app using a native platform or Electro
 | 🔄  | Easy to update. Simply run `npm publish --access public` to update the package. You can then show a banner or notification on the page when there's a new update. There is no need to submit for review or torture yourself with code signing. |
 | 📵  | Works offline. Unless your app actually needs to access the internet. Note that you need to install the package globally `npm i -g <package-name>` instead of using `npx`.                                                                     |
 | 🔐  | No need for authentication because the app runs on user's own computer. Less code to write, less bug. Users of your app can keep their data in their own computer.                                                                             |
-| ⚡  | No need to worry about network waterfalls or slow network. Every HTML, CSS, and JS files are literally already in the user's computer. So it's damn fast.                                                                                      |
+| ⚡  | No need to worry about network waterfalls or slow networks. Every HTML, CSS, and JS file is already on the user's computer, so it's extremely fast.                                                                                            |
 | 🗄️  | The Next.js app can have access to the file system. So you can persist data easily to text files, JSON, or even database like SQLite.                                                                                                          |
 
 # Demo
