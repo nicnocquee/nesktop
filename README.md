@@ -1,5 +1,7 @@
 # About
 
+![](./public/nesktop-small.png)
+
 This repository is a [Next.js](https://nextjs.org) template that can be used to publish the Next.js app as an NPM package.
 
 The idea is instead of making a "desktop" app using a native platform or Electron for cross-platform support, you can make a Next.js app that anyone can **run locally in a single command**. And the app can also work offline if it doesn't need to access the internet.
