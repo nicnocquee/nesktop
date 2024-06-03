@@ -1,6 +1,6 @@
 {
   "name": "@nicnocquee/next-app-as-npm",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "bin": {
     "next-app-as-npm": "start.js"
   },
