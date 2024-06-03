@@ -1,6 +1,6 @@
 {
   "name": "nesktop",
-  "version": "0.0.1",
+  "version": "0.0.25",
   "bin": {
     "nesktop": "start.js"
   },
