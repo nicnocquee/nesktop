@@ -4,7 +4,7 @@ I needed a GUI app for my personal project that required access to the file syst
 
 So I had an idea. Since I am so used to making web apps using Next.js, why don't I make a Next.js app that anyone can run locally without cloning and installing dependencies? It's basically like an Electron app but without the hassle of [managing window lifecycle](https://www.electronjs.org/docs/latest/tutorial/tutorial-first-app#managing-your-apps-window-lifecycle) or [learning the process model](https://www.electronjs.org/docs/latest/tutorial/process-model), etc.
 
-**It turned out it's possible**. Using the [template of this website](https://github.com/nicnocquee/next-app-as-npm), you can create the Next.js app normally and then build it for production. The production build will then be published as an NPM package. Then anyone can simply run
+**It turned out it's possible**. Using the [template of this website](https://github.com/nicnocquee/nesktop), you can create the Next.js app normally and then build it for production. The production build will then be published as an NPM package. Then anyone can simply run
 
 ```
 npx your-next-app-name
@@ -20,7 +20,7 @@ For example, go to the [add user page](/add-user) and enter an email and passwor
 
 # Update Notification
 
-Unlike the Electron app or a Next.js app in the cloud, this app cannot be automatically updated. But the Next.js app in this template gets the current installed version from the package.json file and the latest version from the NPM registry. These values can be accessed from the `process.env.APP_CURRENT_VERSION` and `process.env.APP_LATEST_VERSION` environment variables. If the current version is not the same as the latest version, you can show a notification to the user to update the app like how this app does as you can see in the [UpdateInfo component](https://github.com/nicnocquee/next-app-as-npm/blob/main/app/update-info.tsx).
+Unlike the Electron app or a Next.js app in the cloud, this app cannot be automatically updated. But the Next.js app in this template gets the current installed version from the package.json file and the latest version from the NPM registry. These values can be accessed from the `process.env.APP_CURRENT_VERSION` and `process.env.APP_LATEST_VERSION` environment variables. If the current version is not the same as the latest version, you can show a notification to the user to update the app like how this app does as you can see in the [UpdateInfo component](https://github.com/nicnocquee/nesktop/blob/main/app/update-info.tsx).
 
 # About me
 

@@ -32,7 +32,7 @@ The idea is instead of making a "desktop" app using a native platform or Electro
 To run this repo's Next.js app, run the following command:
 
 ```
-npx @nicnocquee/next-app-as-npm@latest
+npx nesktop@latest
 ```
 
 Once the package is downloaded, it will automatically run the production build of the Next.js app and open the [http://localhost:4323](http://localhost:4323) URL in your browser.
@@ -40,13 +40,13 @@ Once the package is downloaded, it will automatically run the production build o
 If you want to run the app offline, you need to install it globally first instead of using `npx`:
 
 ```
-npm i -g @nicnocquee/next-app-as-npm@latest
+npm i -g nesktop@latest
 ```
 
 then run the app:
 
 ```
-next-app-as-npm
+nesktop
 ```
 
 # Usage
@@ -67,12 +67,12 @@ The Next.js template is bootstrapped using [create-next-app](https://nextjs.org/
 
 When the app is run, it injects the following [environment variables which you can use in your Next.js app](https://www.nico.fyi/blog/stop-using-environment-variable-directly):
 
-| Name                | Description                                                                                                                                                                                                                                                                                                   |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ORIGINAL_CWD        | The directory where your package is run from. For example, if you run `npx next-app-as-npm` from the `/Users/nico/Downloads` directory, the value of this variable will be `/Users/nico/Downloads`. You should not use `process.cwd()` because it will return the directory where NPM installed your package. |
-| APP_NAME            | The name of the app as defined in `package.json`.                                                                                                                                                                                                                                                             |
-| APP_CURRENT_VERSION | The current version of the app as defined in `package.json`.                                                                                                                                                                                                                                                  |
-| APP_LATEST_VERSION  | The latest version of the app which is published to NPM.                                                                                                                                                                                                                                                      |
+| Name                | Description                                                                                                                                                                                                                                                                                           |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ORIGINAL_CWD        | The directory where your package is run from. For example, if you run `npx nesktop` from the `/Users/nico/Downloads` directory, the value of this variable will be `/Users/nico/Downloads`. You should not use `process.cwd()` because it will return the directory where NPM installed your package. |
+| APP_NAME            | The name of the app as defined in `package.json`.                                                                                                                                                                                                                                                     |
+| APP_CURRENT_VERSION | The current version of the app as defined in `package.json`.                                                                                                                                                                                                                                          |
+| APP_LATEST_VERSION  | The latest version of the app which is published to NPM.                                                                                                                                                                                                                                              |
 
 # The main sauce
 
@@ -109,7 +109,7 @@ If you don't want to use the template, you can simply add the following properti
 }
 ```
 
-Then add the [`start.js` file](https://github.com/nicnocquee/next-app-as-npm/blob/main/start.js) to the root of your project.
+Then add the [`start.js` file](https://github.com/nicnocquee/nesktop/blob/main/start.js) to the root of your project.
 
 # License
 
