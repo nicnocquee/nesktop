@@ -1,6 +1,8 @@
 # About
 
-This repository is a [Next.js](https://nextjs.org) template that can be used to publish the Next.js app as an NPM package. The idea is instead of making a "desktop" app using a native platform or Electron for cross-platform support, you can make a Next.js app that anyone can **run locally in a single command**. And the app can also work offline if it doesn't need to access the internet.
+This repository is a [Next.js](https://nextjs.org) template that can be used to publish the Next.js app as an NPM package.
+
+The idea is instead of making a "desktop" app using a native platform or Electron for cross-platform support, you can make a Next.js app that anyone can **run locally in a single command**. And the app can also work offline if it doesn't need to access the internet.
 
 > [!NOTE]  
 > I call it a "desktop" app even though it runs in the browser. Because unlike the web apps that are hosted in the cloud, the Next.js app using this template runs in user's computer and can have access to the file system.
@@ -9,20 +11,20 @@ This repository is a [Next.js](https://nextjs.org) template that can be used to 
 
 |     |                                                                                                                           |
 | --- | ------------------------------------------------------------------------------------------------------------------------- |
-| ✅  | Your app targets people who have installed Node.js in their computer, which is the majority of web developers these days. |
-| ✅  | You're already familiar with Next.js.                                                                                     |
-| ✅  | You don't mind the app runs in the browser instead of in a stand alone window.                                            |
+| 👨‍💻  | Your app targets people who have installed Node.js in their computer, which is the majority of web developers these days. |
+| ▲   | You're already familiar with Next.js.                                                                                     |
+| 🌐  | You don't mind the app runs in the browser instead of in a stand alone window.                                            |
 
 # Benefits
 
 |     |                                                                                                                                                                            |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ✅  | Small package size. This template app is only 1.3 MB (excluding the dependencies, which will be downloaded when the user install the package).                             |
-| ✅  | Easy to update. Simply `npm publish --access public` to update the package. You can then show the banner or notification on the page when there's a new update.            |
-| ✅  | Works offline. Unless your app actually needs to access the internet. Note that you need to install the package globally `npm i -g <package-name>` instead of using `npx`. |
-| ✅  | No need for authentication because the app runs on user's own computer. Less code to write! Users of your app can keep their data in their own computer.                   |
-| ✅  | No need to worry about network waterfalls or slow network. Every HTML, CSS, and JS files are literally already in the user's computer.                                     |
-| ✅  | The Next.js app can have access to the file system. So you can persist data easily to text files, JSON, or even database like SQLite.                                      |
+| 👜  | Small package size. This template app is only 1.3 MB (excluding the dependencies, which will be downloaded when the user install the package).                             |
+| 🔄  | Easy to update. Simply `npm publish --access public` to update the package. You can then show the banner or notification on the page when there's a new update.            |
+| 📵  | Works offline. Unless your app actually needs to access the internet. Note that you need to install the package globally `npm i -g <package-name>` instead of using `npx`. |
+| 🔐  | No need for authentication because the app runs on user's own computer. Less code to write! Users of your app can keep their data in their own computer.                   |
+| 🌀  | No need to worry about network waterfalls or slow network. Every HTML, CSS, and JS files are literally already in the user's computer.                                     |
+| 🗄️  | The Next.js app can have access to the file system. So you can persist data easily to text files, JSON, or even database like SQLite.                                      |
 
 # Demo
 
